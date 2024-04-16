@@ -23,7 +23,7 @@ folder_path = "saved_images"
 def preprocess_image(image_path):
     img = Image.open(image_path)
     img = img.resize((256, 256))  # Resize image to match model's input shape
-    img_array = np.array(img) / 255.0  # Normalize pixel values to range [0, 1]
+    img_arra = np.array(img) / 255.0  # Normalize pixel values to range [0, 1]
     img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
     return img_array
 
